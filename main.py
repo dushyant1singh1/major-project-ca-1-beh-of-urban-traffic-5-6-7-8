@@ -36,16 +36,3 @@ Biology['Good'] = fuzzy.trapmf(Biology.universe,[55,70,75,75])
 Biology['Average'] = fuzzy.trapmf(Biology.universe,[38,55,60,60])
 Biology['Poor'] = fuzzy.trapmf(Biology.universe,[25,30,40,40])
 Biology['Very_Poor'] = fuzzy.trapmf(Biology.universe,[0,15,25,25])
-
-
-#Adding Profession and their consequrnt function
-Engineering = ctrl.Consequent(np.arange(0,1.1,0.1),'Engineering')
-Medicine = ctrl.Consequent(np.arange(0,1.1,0.1),'Medicine')
-Management = ctrl.Consequent(np.arange(0,1.1,0.1),'Management')
-Hospitality = ctrl.Consequent(np.arange(0,1.1,0.1),'Hospitality')
-Chief = ctrl.Consequent(np.arange(0,1.1,0.1),'Chief')
-Teacher = ctrl.Consequent(np.arange(0,1.1,0.1),'Teacher')
-Researcher = ctrl.Consequent(np.arange(0,1.1,0.1),'Researcher')
-Architect = ctrl.Consequent(np.arange(0,1.1,0.1),'Architect')
-Artist = ctrl.Consequent(np.arange(0,1.1,0.1),'Artist')
-Athlete = ctrl.Consequent(np.arange(0,1.1,0.1),'Athlete')
