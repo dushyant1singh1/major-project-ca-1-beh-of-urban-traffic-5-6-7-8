@@ -48,6 +48,74 @@ Biology['Average'] = fuzzy.trapmf(Biology.universe,[38,55,60,60])
 Biology['Poor'] = fuzzy.trapmf(Biology.universe,[25,30,40,40])
 Biology['Very_Poor'] = fuzzy.trapmf(Biology.universe,[0,15,25,25])
 
+Business['Excellent'] = fuzzy.trapmf(Business.universe,[70,85,100,100])
+Business['Good'] = fuzzy.trapmf(Business.universe,[55,70,75,75])
+Business['Average'] = fuzzy.trapmf(Business.universe,[38,55,60,60])
+Business['Poor'] = fuzzy.trapmf(Business.universe,[25,30,40,40])
+Business['Very_Poor'] = fuzzy.trapmf(Business.universe,[0,15,25,25])
+
+Accountancy['Excellent'] = fuzzy.trapmf(Accountancy.universe,[70,85,100,100])
+Accountancy['Good'] = fuzzy.trapmf(Accountancy.universe,[55,70,75,75])
+Accountancy['Average'] = fuzzy.trapmf(Accountancy.universe,[38,55,60,60])
+Accountancy['Poor'] = fuzzy.trapmf(Accountancy.universe,[25,30,40,40])
+Accountancy['Very_Poor'] = fuzzy.trapmf(Accountancy.universe,[0,15,25,25])
+
+PE['Excellent'] = fuzzy.trapmf(PE.universe,[70,85,100,100])
+PE['Good'] = fuzzy.trapmf(PE.universe,[55,70,75,75])
+PE['Average'] = fuzzy.trapmf(PE.universe,[38,55,60,60])
+PE['Poor'] = fuzzy.trapmf(PE.universe,[25,30,40,40])
+PE['Very_Poor'] = fuzzy.trapmf(PE.universe,[0,15,25,25])
+
+CS['Excellent'] = fuzzy.trapmf(CS.universe,[70,85,100,100])
+CS['Good'] = fuzzy.trapmf(CS.universe,[55,70,75,75])
+CS['Average'] = fuzzy.trapmf(CS.universe,[38,55,60,60])
+CS['Poor'] = fuzzy.trapmf(CS.universe,[25,30,40,40])
+CS['Very_Poor'] = fuzzy.trapmf(CS.universe,[0,15,25,25])
+
+History['Excellent'] = fuzzy.trapmf(History.universe,[70,85,100,100])
+History['Good'] = fuzzy.trapmf(History.universe,[55,70,75,75])
+History['Average'] = fuzzy.trapmf(History.universe,[38,55,60,60])
+History['Poor'] = fuzzy.trapmf(History.universe,[25,30,40,40])
+History['Very_Poor'] = fuzzy.trapmf(History.universe,[0,15,25,25])
+
+Geography['Excellent'] = fuzzy.trapmf(Geography.universe,[70,85,100,100])
+Geography['Good'] = fuzzy.trapmf(Geography.universe,[55,70,75,75])
+Geography['Average'] = fuzzy.trapmf(Geography.universe,[38,55,60,60])
+Geography['Poor'] = fuzzy.trapmf(Geography.universe,[25,30,40,40])
+Geography['Very_Poor'] = fuzzy.trapmf(Geography.universe,[0,15,25,25])
+
+Economy['Excellent'] = fuzzy.trapmf(Economy.universe,[70,85,100,100])
+Economy['Good'] = fuzzy.trapmf(Economy.universe,[55,70,75,75])
+Economy['Average'] = fuzzy.trapmf(Economy.universe,[38,55,60,60])
+Economy['Poor'] = fuzzy.trapmf(Economy.universe,[25,30,40,40])
+Economy['Very_Poor'] = fuzzy.trapmf(Economy.universe,[0,15,25,25])
+
+Politics['Excellent'] = fuzzy.trapmf(Politics.universe,[70,85,100,100])
+Politics['Good'] = fuzzy.trapmf(Politics.universe,[55,70,75,75])
+Politics['Average'] = fuzzy.trapmf(Politics.universe,[38,55,60,60])
+Politics['Poor'] = fuzzy.trapmf(Politics.universe,[25,30,40,40])
+Politics['Very_Poor'] = fuzzy.trapmf(Politics.universe,[0,15,25,25])
+
+Literature['Excellent'] = fuzzy.trapmf(Literature.universe,[70,85,100,100])
+Literature['Good'] = fuzzy.trapmf(Literature.universe,[55,70,75,75])
+Literature['Average'] = fuzzy.trapmf(Literature.universe,[38,55,60,60])
+Literature['Poor'] = fuzzy.trapmf(Literature.universe,[25,30,40,40])
+Literature['Very_Poor'] = fuzzy.trapmf(Literature.universe,[0,15,25,25])
+
+Language['Excellent'] = fuzzy.trapmf(Language.universe,[70,85,100,100])
+Language['Good'] = fuzzy.trapmf(Language.universe,[55,70,75,75])
+Language['Average'] = fuzzy.trapmf(Language.universe,[38,55,60,60])
+Language['Poor'] = fuzzy.trapmf(Language.universe,[25,30,40,40])
+Language['Very_Poor'] = fuzzy.trapmf(Language.universe,[0,15,25,25])
+
+Art['Excellent'] = fuzzy.trapmf(Art.universe,[70,85,100,100])
+Art['Good'] = fuzzy.trapmf(Art.universe,[55,70,75,75])
+Art['Average'] = fuzzy.trapmf(Art.universe,[38,55,60,60])
+Art['Poor'] = fuzzy.trapmf(Art.universe,[25,30,40,40])
+Art['Very_Poor'] = fuzzy.trapmf(Art.universe,[0,15,25,25])
+
+
+
 
 #Adding Profession and their consequrnt function
 Engineering = ctrl.Consequent(np.arange(0,1.1,0.1),'Engineering')
