@@ -5,6 +5,15 @@ import skfuzzy as fuzzy
 import matplotlib.pyplot as plt
 from skfuzzy import control as ctrl
 
+'''
+What is Antecedent and Consequent?
+
+A consequent is the second half of a hypothetical proposition.
+In the standard form of such a proposition, it is the part that follows "then".
+In an implication, if P implies Q,
+then P is called the antecedent and Q is called the consequent. 
+'''
+
 # adding antecedent function
 Physics = ctrl.Antecedent(np.arange(0,101,1),'Physics')
 Maths = ctrl.Antecedent(np.arange(0,101,1),'Maths')
@@ -21,6 +30,15 @@ Economy = ctrl.Antecedent(np.arange(0,101,1),'Economy')
 Literature = ctrl.Antecedent(np.arange(0,101,1),'Literature')
 Language = ctrl.Antecedent(np.arange(0,101,1),'Language')
 Art = ctrl.Antecedent(np.arange(0,101,1),'Art')
+
+'''
+What is membership fumction???
+
+Membership functions allow us to graphically represent a fuzzy set.
+The x axis represents the universe of discourse, whereas
+the y axis represents the degrees of membership in the [0,1] interval.
+
+'''
 
 
 #using trapmf(Trapizoidal membership Function)
