@@ -7,7 +7,7 @@ The term fuzzy refers to things which are not clear or are vague. In the real wo
 In boolean system truth value, 1.0 represents absolute truth value and 0.0 represents absolute false value. But in the fuzzy system, there is no logic for absolute truth and absolute false value. But in fuzzy logic, there is intermediate value too present which is partially true and partially false.
 
 
-  ![fuzzy-logic_1](https://user-images.githubusercontent.com/42700950/68443217-4be4ed00-01f9-11ea-8d4f-dcdd6f629041.png)
+![fuzzy-logic_1](https://user-images.githubusercontent.com/42700950/68443217-4be4ed00-01f9-11ea-8d4f-dcdd6f629041.png)
 
 ## ARCHITECTURE
 
@@ -24,3 +24,5 @@ It determines the matching degree of the current fuzzy input with respect to eac
 
 ##### 4) DEFUZZIFICATION :
 It is used to convert the fuzzy sets obtained by inference engine into a crisp value. There are several defuzzification methods available and the best suited one is used with a specific expert system to reduce the error.
+
+![fuzzylogic_architecture](https://user-images.githubusercontent.com/42700950/68443662-a3378d00-01fa-11ea-9390-a4a8aeddcf90.png)
