@@ -13,7 +13,7 @@ In the standard form of such a proposition, it is the part that follows "then".
 In an implication, if P implies Q,
 then P is called the antecedent and Q is called the consequent. 
 '''
-
+#antecedents are nothing but just x values that we will be taking as input to our fuzzy system
 # adding antecedent function
 Physics = ctrl.Antecedent(np.arange(0,101,1),'Physics')
 Maths = ctrl.Antecedent(np.arange(0,101,1),'Maths')
@@ -42,6 +42,8 @@ the y axis represents the degrees of membership in the [0,1] interval.
 
 
 #using trapmf(Trapizoidal membership Function)
+''' trapmf is a membership function which is dividing our input antecedent in different different categories
+on the basis of defined range that is if it is between 70 to 100 then it is excellent'''
 Physics['Excellent'] = fuzzy.trapmf(Physics.universe,[70,85,100,100])
 Physics['Good'] = fuzzy.trapmf(Physics.universe,[55,70,75,75])
 Physics['Average'] = fuzzy.trapmf(Physics.universe,[38,55,60,60])
