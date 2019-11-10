@@ -26,3 +26,14 @@ It determines the matching degree of the current fuzzy input with respect to eac
 It is used to convert the fuzzy sets obtained by inference engine into a crisp value. There are several defuzzification methods available and the best suited one is used with a specific expert system to reduce the error.
 
 ![fuzzylogic_architecture](https://user-images.githubusercontent.com/42700950/68443662-a3378d00-01fa-11ea-9390-a4a8aeddcf90.png)
+
+## Membership function
+
+A graph that defines how each point in the input space is mapped to membership value between 0 and 1. Input space is often referred as the universe of discourse or universal set (u), which contain all the possible elements of concern in each particular application.
+There are largely three types of fuzzifiers:
+
+Singleton fuzzifier
+Gaussian fuzzifier
+Trapezoidal or triangular fuzzifier
+
+##### These are all the concepts that are used in this project so before moving to code make sure you have gone to them atleast once.
