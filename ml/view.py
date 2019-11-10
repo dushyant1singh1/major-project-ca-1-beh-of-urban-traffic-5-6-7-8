@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 import operator
 import numpy as np
-from project_code import hello
+from project_code import modified
 import math
 
 def home(request):
@@ -30,7 +30,7 @@ def implimentation(request):
     
     all_subject=[int(physics),int(math),int(chemistry),int(biology),int(business),int(accountancy),
         int(pe),int(cs),int(history),int(geography),int(politics),int(economy),int(literature),int(language),int(art)]
-    diction=(hello.rulesset(all_subject))
+    diction=(modified.rulesset(all_subject))
     diction=dict(diction)
     for key in diction:
         diction[key]=int(diction[key]*100)
