@@ -3,6 +3,7 @@ from django.http import HttpResponse
 import operator
 import numpy as np
 from project_code import hello
+import math
 
 def home(request):
     
@@ -27,5 +28,11 @@ def implimentation(request):
     language=request.GET['h_language']
     art=request.GET['h_art']
     
-    all_subject=[physics,math,chemistry,biology,business,accountancy,pe,cs,history,geography,politics,economy,literature,language,art]
-    return render(request,'showresult.html',{"h_math":all_subject})
+    all_subject=[int(physics),int(math),int(chemistry),int(biology),int(business),int(accountancy),
+        int(pe),int(cs),int(history),int(geography),int(politics),int(economy),int(literature),int(language),int(art)]
+    diction=(hello.rulesset(all_subject))
+    diction=dict(diction)
+    for key in diction:
+        diction[key]=int(diction[key]*100)
+    return render(request,'showresult.html',{"data":diction})
+

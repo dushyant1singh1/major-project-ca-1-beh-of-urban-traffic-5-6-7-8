@@ -3,7 +3,7 @@ import skfuzzy as fuzzy
 import matplotlib.pyplot as plt
 from skfuzzy import control as ctrl
 
-def rulesset():
+def rulesset(raw_list):
     Physics = ctrl.Antecedent(np.arange(0,101,1),'Physics')
     Maths = ctrl.Antecedent(np.arange(0,101,1),'Maths')
     Chemistry = ctrl.Antecedent(np.arange(0,101,1),'Chemistry')
@@ -135,7 +135,7 @@ def rulesset():
     Insuranceagent= ctrl.Consequent(np.arange(0,1.1,0.1),'Insuranceagent')
     Realestate= ctrl.Consequent(np.arange(0,1.1,0.1),'Realestate')
     Telemarketer= ctrl.Consequent(np.arange(0,1.1,0.1),'Telemarketer')
-    work_around = ctrl.Consequent(np.arange(0,1.1,0.1),'work_around')
+    #work_around = ctrl.Consequent(np.arange(0,1.1,0.1),'work_around')
 
     Engineering.automf(names=['Not_good','Good','Excellent'])
     Medicine.automf(names=['Not_good','Good','Excellent'])
@@ -161,7 +161,7 @@ def rulesset():
     Insuranceagent.automf(names=['Not_good','Good','Excellent'])
     Realestate.automf(names=['Not_good','Good','Excellent'])
     Telemarketer.automf(names=['Not_good','Good','Excellent'])
-    work_around.automf(names=['DUD'])
+   # work_around.automf(names=['DUD'])
 
     rule1 = ctrl.Rule(Physics['Excellent'] & Maths['Excellent'] & Chemistry['Excellent'], Engineering['Excellent'])
     rule2 = ctrl.Rule(Physics['Excellent'] & Maths['Excellent'] & Chemistry['Good'], Engineering['Excellent'])
@@ -275,37 +275,37 @@ def rulesset():
     rule99 = ctrl.Rule(Art['Average'] & Language['Average'] & History['Good'], Chief['Not_good'])
     rule78 = ctrl.Rule(Art['Average'] & Language['Average'] & History['Average'], Chief['Not_good'])
 
-    rule100 = ctrl.Rule(Physics['Very_Poor'],work_around['DUD'])
-    rule101 = ctrl.Rule(Maths['Very_Poor'],work_around['DUD'])
-    rule102 = ctrl.Rule(Chemistry['Very_Poor'],work_around['DUD'])
-    rule103 = ctrl.Rule(Biology['Very_Poor'],work_around['DUD'])
-    rule104 = ctrl.Rule(Business['Very_Poor'],work_around['DUD'])
-    rule105 = ctrl.Rule(Accountancy['Very_Poor'],work_around['DUD'])
-    rule106 = ctrl.Rule(PE['Very_Poor'],work_around['DUD'])
-    rule107 = ctrl.Rule(CS['Very_Poor'],work_around['DUD'])
-    rule108 = ctrl.Rule(History['Very_Poor'],work_around['DUD'])
-    rule109 = ctrl.Rule(Geography['Very_Poor'],work_around['DUD'])
-    rule110 = ctrl.Rule(Politics['Very_Poor'],work_around['DUD'])
-    rule111 = ctrl.Rule(Economy['Very_Poor'],work_around['DUD'])
-    rule112 = ctrl.Rule(Literature['Very_Poor'],work_around['DUD'])
-    rule113 = ctrl.Rule(Language['Very_Poor'],work_around['DUD'])
-    rule114 = ctrl.Rule(Art['Very_Poor'],work_around['DUD'])
+   #  rule100 = ctrl.Rule(Physics['Very_Poor'],work_around['DUD'])
+   #  rule101 = ctrl.Rule(Maths['Very_Poor'],work_around['DUD'])
+   #  rule102 = ctrl.Rule(Chemistry['Very_Poor'],work_around['DUD'])
+   #  rule103 = ctrl.Rule(Biology['Very_Poor'],work_around['DUD'])
+   #  rule104 = ctrl.Rule(Business['Very_Poor'],work_around['DUD'])
+   #  rule105 = ctrl.Rule(Accountancy['Very_Poor'],work_around['DUD'])
+   #  rule106 = ctrl.Rule(PE['Very_Poor'],work_around['DUD'])
+   #  rule107 = ctrl.Rule(CS['Very_Poor'],work_around['DUD'])
+   #  rule108 = ctrl.Rule(History['Very_Poor'],work_around['DUD'])
+   #  rule109 = ctrl.Rule(Geography['Very_Poor'],work_around['DUD'])
+   #  rule110 = ctrl.Rule(Politics['Very_Poor'],work_around['DUD'])
+   #  rule111 = ctrl.Rule(Economy['Very_Poor'],work_around['DUD'])
+   #  rule112 = ctrl.Rule(Literature['Very_Poor'],work_around['DUD'])
+   #  rule113 = ctrl.Rule(Language['Very_Poor'],work_around['DUD'])
+   #  rule114 = ctrl.Rule(Art['Very_Poor'],work_around['DUD'])
 
-    rule115 = ctrl.Rule(Physics['Poor'],work_around['DUD'])
-    rule116 = ctrl.Rule(Maths['Poor'],work_around['DUD'])
-    rule117 = ctrl.Rule(Chemistry['Poor'],work_around['DUD'])
-    rule118 = ctrl.Rule(Biology['Poor'],work_around['DUD'])
-    rule119 = ctrl.Rule(Business['Poor'],work_around['DUD'])
-    rule120 = ctrl.Rule(Accountancy['Poor'],work_around['DUD'])
-    rule121 = ctrl.Rule(PE['Poor'],work_around['DUD'])
-    rule122 = ctrl.Rule(CS['Poor'],work_around['DUD'])
-    rule123 = ctrl.Rule(History['Poor'],work_around['DUD'])
-    rule124 = ctrl.Rule(Geography['Poor'],work_around['DUD'])
-    rule125 = ctrl.Rule(Politics['Poor'],work_around['DUD'])
-    rule126 = ctrl.Rule(Economy['Poor'],work_around['DUD'])
-    rule127 = ctrl.Rule(Literature['Poor'],work_around['DUD'])
-    rule128 = ctrl.Rule(Language['Poor'],work_around['DUD'])
-    rule129 = ctrl.Rule(Art['Poor'],work_around['DUD'])
+   #  rule115 = ctrl.Rule(Physics['Poor'],work_around['DUD'])
+   #  rule116 = ctrl.Rule(Maths['Poor'],work_around['DUD'])
+   #  rule117 = ctrl.Rule(Chemistry['Poor'],work_around['DUD'])
+   #  rule118 = ctrl.Rule(Biology['Poor'],work_around['DUD'])
+   #  rule119 = ctrl.Rule(Business['Poor'],work_around['DUD'])
+   #  rule120 = ctrl.Rule(Accountancy['Poor'],work_around['DUD'])
+   #  rule121 = ctrl.Rule(PE['Poor'],work_around['DUD'])
+   #  rule122 = ctrl.Rule(CS['Poor'],work_around['DUD'])
+   #  rule123 = ctrl.Rule(History['Poor'],work_around['DUD'])
+   #  rule124 = ctrl.Rule(Geography['Poor'],work_around['DUD'])
+   #  rule125 = ctrl.Rule(Politics['Poor'],work_around['DUD'])
+   #  rule126 = ctrl.Rule(Economy['Poor'],work_around['DUD'])
+   #  rule127 = ctrl.Rule(Literature['Poor'],work_around['DUD'])
+   #  rule128 = ctrl.Rule(Language['Poor'],work_around['DUD'])
+   #  rule129 = ctrl.Rule(Art['Poor'],work_around['DUD'])
 
 
     rule130 = ctrl.Rule(Language['Excellent'] & (Chemistry['Excellent'] | Physics['Excellent'] | Maths['Excellent'] |  Biology['Excellent'] |  Business['Excellent'] |  Accountancy['Excellent'] |  PE['Excellent'] |  CS['Excellent'] |  History['Excellent'] |  Geography['Excellent'] |  Politics['Excellent'] |  Economy['Excellent'] |  Literature['Excellent'] |  Art['Excellent']), Teacher['Excellent'])
@@ -583,9 +583,11 @@ def rulesset():
     ,rule20,rule21,rule22,rule23,rule24,rule25,rule26,rule27,rule28,rule29,rule30,rule31,rule32,rule33,rule34,rule35,rule36,rule37,rule38,rule39
     ,rule40,rule41,rule42,rule43,rule44,rule45,rule46,rule47,rule48,rule49,rule50,rule51,rule52,rule53,rule54,rule55,rule56,rule57,rule58,rule59,
     rule60,rule61,rule62,rule63,rule64,rule65,rule66,rule67,rule68,rule69,rule70,rule71,rule72,rule73,rule74,rule75,rule76,rule77,rule78,rule79,rule80
-    ,rule81,rule82,rule83,rule84,rule85,rule86,rule87,rule88,rule89,rule90,rule91,rule92,rule93,rule94,rule95,rule96,rule97,rule98,rule99,rule100
-    ,rule101,rule102,rule103,rule104,rule105,rule106,rule107,rule108,rule109,rule110,rule111,rule112,rule113,rule114,rule115,rule116,rule117,
-    rule118,rule119,rule120,rule121,rule122,rule123,rule124,rule125,rule126,rule127,rule128,rule129,rule130,rule131,rule132,rule133,rule134,
+    ,rule81,rule82,rule83,rule84,rule85,rule86,rule87,rule88,rule89,rule90,rule91,rule92,rule93,rule94,rule95,rule96,rule97,rule98,rule99
+    ,#rule100
+    #,rule101,rule102,rule103,rule104,rule105,rule106,rule107,rule108,rule109,rule110,rule111,rule112,rule113,rule114,rule115,rule116,rule117,
+    #rule118,rule119,rule120,rule121,rule122,rule123,rule124,rule125,rule126,rule127,rule128,rule129,
+    rule130,rule131,rule132,rule133,rule134,
     rule135,rule136,rule137,rule138,rule139,rule140,rule141,rule142,rule143,rule144,rule145,rule146,rule147,rule148,rule149,rule150,rule151,rule152,rule153,
     rule154,rule155,rule156,rule157,rule158,rule159,rule160,rule161,rule162,rule163,rule164,rule165,rule166,rule167,rule168,rule169,rule170,rule171,rule172,
     rule173,rule174,rule175,rule176,rule177,rule178,rule179,rule180,rule181,rule182,rule183,rule184,rule185,rule186,rule187,rule188,rule189,rule190,rule191,
@@ -599,9 +601,100 @@ def rulesset():
     rule325,rule326,rule327,rule328,rule329,rule330,rule331,rule332,rule333,rule334,rule335,rule336,rule337,rule338,rule339,rule340,rule341,rule342,rule343,
     rule344,rule345,rule346,rule347,rule348,rule349,rule350,rule351,rule352,rule353,rule354,rule355,rule356,rule357,rule358,rule359,rule360,
     rule361,rule362,rule363,rule364,rule365,rule366,rule367,rule368,rule369,rule370,rule371,rule372
-
     ])
     system = ctrl.ControlSystemSimulation(rules)
-    
+    i = raw_list[0]
+    if i >= 40:
+       system.input['Physics']= i
+    else:
+       system.input['Physics']= 40
 
-    
+    i = raw_list[1]
+    if i >= 40:
+       system.input['Maths']= i
+    else:
+       system.input['Maths']= 40
+
+    i = raw_list[2]
+    if i >= 40:
+       system.input['Chemistry']= i
+    else:
+       system.input['Chemistry']= 40
+
+    i = raw_list[3]
+    if i >= 40:
+       system.input['Biology']= i
+    else:
+       system.input['Biology']= 40
+
+    i = raw_list[4]
+    if i >= 40:
+       system.input['Business']= i
+    else:
+       system.input['Business']= 40
+
+    i = raw_list[5]
+    if i >= 40:
+       system.input['Accountancy']= i
+    else:
+       system.input['Accountancy']= 40
+
+    i = raw_list[6]
+    if i >= 40:
+       system.input['PE']= i
+    else:
+       system.input['PE']= 40
+
+    i = raw_list[7]
+    if i >= 40:
+       system.input['CS']= i
+    else:
+       system.input['CS']= 40
+
+    i = raw_list[8]
+    if i >= 40:
+       system.input['History']= i
+    else:
+       system.input['History']= 40
+
+    i = raw_list[9]
+    if i >= 40:
+       system.input['Geography']= i
+    else:
+       system.input['Geography']= 40
+
+    i = raw_list[10]
+    if i >= 40:
+       system.input['Politics']= i
+    else:
+       system.input['Politics']= 40
+
+    i = raw_list[11]
+    if i >= 40:
+       system.input['Economy']= i
+    else:
+       system.input['Economy']= 40
+
+    i = raw_list[12]
+    if i >= 40:
+       system.input['Literature']= i
+    else:
+       system.input['Literature']= 40
+
+    i = raw_list[13]
+    if i >= 40:
+       system.input['Language']= i
+    else:
+       system.input['Language']= 40
+
+    i = raw_list[14]
+    if i >= 40:
+       system.input['Art']= i
+    else:
+       system.input['Art']= 40
+
+
+
+    system.compute()
+    l=system.output
+    return l

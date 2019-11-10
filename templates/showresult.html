@@ -7,20 +7,94 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.2/dist/Chart.min.js"></script>
     <title>Hello, world!</title>
   </head>
   <body class="container">
-    <h1>Hello, world!</h1>
-    
-    <p>result</p>
-    {% for word in h_math%}
-    <p>{{word}}</p> 
-    {%endfor%}
+    <h3>Here is the chart</h3>
+    <canvas id="myChart" >
+
+
+    </canvas>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+    // chart code goes here
+    var data1="{{data|safe}}";
+            var obj1=JSON.parse(data1.replace(/'/g, '"'));
+            //var key=[];
+           var value=[obj1.Engineering,obj1.Medicine,obj1.Management,obj1.Hospitality,obj1.Chief,obj1.Teacher,obj1.Researcher,obj1.Architect,obj1.Artist,obj1.Athlete,obj1.Fitness_trainer,obj1.Politician,obj1.Archeologist,obj1.Poet,obj1.Writer,obj1.chemist,obj1.Singer,obj1.Bankmanager,obj1.psychologist,obj1.Physician,obj1.Civilengineer,obj1.Insuranceagent,obj1.Realestate,obj1.Telemarketer];
+            
+            console.log(value);
+
+
+
+            var ctx = document.getElementById('myChart').getContext('2d');
+            
+            var myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Engineering','Medicine','Management','Hospitality','Chief','Teacher','Researcher','Architect','Artist','Athlete','FitnessTrainer','Politician','Archeologist','Poet','Writer','chemist','Singer','BankManager','Psychologist','Physician','CivilEngineer','InsuranceAgent','RealEstate','Telemarketer'],
+                    datasets: [{
+                        label: 'Career Success Rate ( in percentage ) ',
+                        data: value,
+                        backgroundColor: [
+                            'rgba(255,25,0,1)',
+                            'rgba(213,184,74,1)',
+                            'rgba(94,200,136,1)',
+                            'rgba(105,89,198,1)',
+                            'rgba(255,121,114,1)',
+                            'rgba(0,171,164,1)',
+                            'rgba(255,121,114,1)',
+                            'rgba(105,89,198,1)',
+                            'rgba(94,200,136,1)',
+                            'rgba(213,184,74,1)',
+                            'rgba(255,25,0,1)',
+                            'rgba(213,184,74,1)',
+                            'rgba(94,200,136,1)',
+                            'rgba(105,89,198,1)',
+                            'rgba(255,121,114,1)',
+                            'rgba(0,171,164,1)',
+                            'rgba(255,121,114,1)',
+                            'rgba(105,89,198,1)',
+                            'rgba(94,200,136,1)',
+                            'rgba(213,184,74,1)',
+                            'rgba(255,25,0,1)',
+                            'rgba(213,184,74,1)',
+                            'rgba(94,200,136,1)',
+                            'rgba(105,89,198,1)',
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 0)',
+                            'rgba(54, 162, 235, 0)',
+                            'rgba(255, 206, 86, 0)',
+                            'rgba(75, 192, 192, 0)',
+                            'rgba(153, 102, 255, 0)',
+                            'rgba(255, 159, 64, 0)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    }
+                }
+            });
+
+
+    
+    </script>
   </body>
 </html>
