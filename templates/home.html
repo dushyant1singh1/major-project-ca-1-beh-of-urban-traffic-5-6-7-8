@@ -4,98 +4,225 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
 
+
+    <style>
+           
+        .loader-wrapper {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: #242f3f;
+          display:flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .loader {
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+          position: relative;
+          border: 4px solid #Fff;
+          animation: loader 4s infinite ease;
+        }
+        .loader-inner {
+          vertical-align: top;
+          display: inline-block;
+          width: 100%;
+          background-color: #fff;
+          animation: loader-inner 2s infinite ease-in;
+        }
+        @keyframes loader {
+          0% { transform: rotate(0deg);}
+          25% { transform: rotate(180deg);}
+          50% { transform: rotate(180deg);}
+          75% { transform: rotate(360deg);}
+          100% { transform: rotate(360deg);}
+        }
+        @keyframes loader-inner {
+          0% { height: 0%;}
+          25% { height: 0%;}
+          50% { height: 100%;}
+          75% { height: 100%;}
+          100% { height: 0%;}
+        }
+            
+            </style>
+    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Supermercado+One|Yeon+Sung&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC|Supermercado+One|Yeon+Sung&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
     <title>Career guidance portal</title>
   </head>
-  <body class="container">
+  <body class="container" style="background-image: linear-gradient(to top right,#37B9E9, #2ECBDC,#68C3C7,#99BDB5);">
       {% load static %}
-      <div class="row">
+      <div class="row" >
+      <div class="col">
           <img src="{% static 'image1.png' %}" class='rounded float-left ml-3 img-fluid' alt="logo" width=300px>
       </div>
-    <h3 class="my-5">Welcome To Career Guidance Platform</h3>
-    <form action="{%url 'implimentation'%}" style="font-family: 'Supermercado One', cursive;font:size 80px">
-        <div class="row mb-3">
+      <div class="col">
+            <h3 class="my-5" style="font-size:2.8rem;">Career Guidance Platform</h3>
+      </div>
+      </div>
+      <!--   -->
+    <form action="{%url 'implimentation'%}" style="font-family: 'Supermercado One', cursive;font:size 80px;"  class=" mt-5">
+       <div class="row">
+           <div class="col-4">
+               <p style="font-family: 'Ubuntu', sans-serif   ;">
+                  This Webpage is a implimentation of Fuzzy System using Python module <a href="https://github.com/scikit-fuzzy/scikit-fuzzy" style="color: maroon;">scikit-fuzzy</a>
+                  .<br> Provide input of your subject marks in appropriate input box. 
+              
+              
+               </p>
+           </div>
+           <div class="col-8">
+         <div class="row mb-3">
+
             <div class="col">
                     <label for="h_physics" >Physics </label>
-                <input type="text" class='form-control' name='h_physics'>
+                <input type="text" class='form-control' name='h_physics' value=0 required>
             </div>
             <div class="col">
                     <label for="h_math">Math</label>
-                <input type="text"  class='form-control' name="h_math">
+                <input type="text"  class='form-control' name="h_math" value=0 required>
             </div>
             <div class="col">
                     <label for="h_chemistry">Chemistry</label>
-                <input type="text"  class='form-control' name='h_chemistry'>
+                <input type="text"  class='form-control' name='h_chemistry' value=0 required>
             </div>
         </div>
         <div class="row mb-3">
             <div class="col">
                     <label for="h_biology">Biology</label>
-                <input type="text"  class='form-control' name="h_biology">
+                <input type="text"  class='form-control' name="h_biology" value=0 required>
             </div>
             <div class="col">
                     <label for="h_business">Business</label>
-                <input type="text"  class='form-control' name='h_business'>
+                <input type="text"  class='form-control' name='h_business' value=0 required>
             </div>
             <div class="col">
                     <label for="h_accountancy">Accountancy</label>
-                    <input type="text"  class='form-control' name='h_accountancy'>
+                    <input type="text"  class='form-control' name='h_accountancy' value=0 required>
             </div>
             
         </div>
         <div class="row mb-3">
             <div class="col">
                     <label for="h_pe">PhysicalEducation</label>
-                    <input type="text"  class='form-control' name="h_pe">
+                    <input type="text"  class='form-control' name="h_pe" value=0 required>
             </div>
             <div class="col">
                     <label for="h_cs">CS</label>
-                    <input type="text"  class='form-control' name='h_cs'>
+                    <input type="text"  class='form-control' name='h_cs' value=0 required>
             </div>
             <div class="col">
                     <label for="h_history">History</label>
-                    <input type="text"  class='form-control' name="h_history">
+                    <input type="text"  class='form-control' name="h_history" value=0 required>
             </div>
         </div>
         <div class="row mb-3">
             <div class="col">
                     <label for="h_geography">Geography</label>
-                    <input type="text"  class='form-control' name='h_geography'>
+                    <input type="text"  class='form-control' name='h_geography' value=0 required>
             </div>
             <div class="col">
                     <label for="h_politics">Politics</label>
-                    <input type="text"  class='form-control' name='h_politics'>
+                    <input type="text"  class='form-control' name='h_politics' value=0 required>
             </div>
             <div class="col">
                     <label for="h_economy">Economics</label>
-                    <input type="text"  class='form-control' name='h_economy'>
+                    <input type="text"  class='form-control' name='h_economy' value=0 required>
             </div>
         </div>
         <div class="row mb-3">
             <div class="col">
                     <label for="h_literature">Literature</label>
-                    <input type="text"  class='form-control' name="h_literature">
+                    <input type="text"  class='form-control' name="h_literature" value=0 required>
             </div>
             <div class="col">
                     <label for="h_language">Language</label>
-                    <input type="text"  class='form-control' name="h_language">
+                    <input type="text"  class='form-control' name="h_language" value=0 required>
             </div>
             <div class="col">
                     <label for="h_art">Arts</label>
-                    <input type="text"  class='form-control' name="h_art">
+                    <input type="text"  class='form-control' name="h_art" value=0 required>
             </div>
         </div>
         <div class="row mx-0">
-            <button class='btn btn-primary' type='submit' value='implimentation' style="font-family: 'Bowlby One SC', cursive;width: 300px;">G e t____ R e s u l t </button>
+            <button class='btn btn-primary'  value='implimentation' onclick="input_validation()" style="font-family: 'Bowlby One SC', cursive;width: 300px;" >G e t____ R e s u l t </button>
         </div>
+        </div>
+    </div>
+
     </form>
+    <div class="loader-wrapper">
+            <span class="loader"><span class="loader-inner"></span></span>
+          </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+        // function input_validation(){
+        //     if (isNaN(document.getElementsByName("h_math").value)){
+        //         document.getElementsByName("h_math").value=0;
+        //         console.log(document.getElementsByName("h_math").value)
+        //     }
+        //     if (isNaN(document.getElementsByName('h_physics').value)){
+        //         document.getElementsByName('h_physics').value=0;
+        //     }
+        //     if (isNaN(document.getElementsByName("h_art").value)){
+        //         document.getElementsByName("h_art").value=0;
+        //     }
+        //     if (isNaN(document.getElementsByName("h_language").value)){
+        //         document.getElementsByName("h_language").value=0;
+        //     } 
+        //     if (isNaN(document.getElementsByName("h_literature").value)){
+        //         document.getElementsByName("h_literature").value=0;
+        //     }
+        //     if (isNaN(document.getElementsByName("h_economy").value)){
+        //         document.getElementsByName("h_economy").value=0;
+        //     }
+        //     if (isNaN(document.getElementsByName("h_politics").value)){
+        //         document.getElementsByName("h_politics").value=0;
+        //     }
+        //     if (isNaN(document.getElementsByName("h_geography").value)){
+        //         document.getElementsByName("h_geography").value=0;
+        //                 }
+        //     if (isNaN(document.getElementsByName("h_history").value)){
+        //         document.getElementsByName("h_history").value=0;
+        //                 }
+        //     if (isNaN(document.getElementsByName("h_cs").value)){
+        //         document.getElementsByName("h_cs").value=0;
+        //                 }
+        //     if (isNaN(document.getElementsByName("h_pe").value)){
+        //         document.getElementsByName("h_pe").value=0;
+        //                 }
+        //     if (isNaN(document.getElementsByName("h_biology").value)){
+        //         document.getElementsByName("h_biology").value=0;
+        //                 }
+        //     if (isNaN(document.getElementsByName("h_business").value)){
+        //         document.getElementsByName("h_business").value=0;
+        //                 }
+        //     if (isNaN(document.getElementsByName("h_accontancy").value)){
+        //         document.getElementsByName("h_accontancy").value=0;
+        //                 }
+        //     if (isNaN(document.getElementsByName("h_chemistry").value)){
+        //         document.getElementsByName("h_chemistry").value=0;
+        //     }
+             
+        // };
+        $(window).on("load",function(){
+        $(".loader-wrapper").fadeOut("slow");
+});
+    </script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>

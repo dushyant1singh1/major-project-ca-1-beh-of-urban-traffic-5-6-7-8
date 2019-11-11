@@ -35,4 +35,4 @@ def implimentation(request):
     for key in diction:
         diction[key]=int(diction[key]*100)
     return render(request,'showresult.html',{"data":diction})
-
+    
