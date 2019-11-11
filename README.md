@@ -7,3 +7,4 @@ Dependencies- django 2.2.0
               Jquery
 Input should be given in Integer and default value is zero.
 This project is using Trapezoidal membership function generator.
+For model serialization we used pickle
